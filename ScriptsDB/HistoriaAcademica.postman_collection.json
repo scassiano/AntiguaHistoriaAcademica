@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "49ca46ff-64c9-45bf-94ef-15304760c228",
+		"name": "HistoriaAcademica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23147092"
+	},
+	"item": [
+		{
+			"name": "Prototipo1 historiaAcademica",
+			"item": [
+				{
+					"name": "getAllSubjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subjects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubjectByCode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subjects/2025964",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subjects",
+								"2025964"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postNewSubject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":123,\r\n    \"name\":\"Arquitectura de Software Prueba\",\r\n    \"credits\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/subjects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putSubject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Aruitectura de software nueva\",\r\n    \"credits\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/subjects/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subjects",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSubject",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subjects/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subjects",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAcademicStory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/academicStory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"academicStory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStudentSubject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/studentSubjects/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"studentSubjects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCreditHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/creditHistory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"creditHistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postAcademicStory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"anaperezca\",\r\n    \"faculty\":\"Facultade de Ingeniería\",\r\n    \"career_code\":2879,\r\n    \"career_name\":\"Ingeniería de Sistemas y Computación\",\r\n    \"state\":\"Abierto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/academicStory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"academicStory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8081/api/creditsTaken/40",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fundamentacion_obligatoria_taken\":2,\r\n    \"fundamentacion_optativa_taken\":0,\r\n    \"disciplinar_obligatoria_taken\":3,\r\n    \"disciplinar_optativa_taken\":3,\r\n    \"libre_eleccion_taken\":3,\r\n    \"nivelacion_taken\":4,\r\n    \"trabajo_de_grado_taken\":0,\r\n    \"total_taken\":15,\r\n    \"fundamentacion_obligatoria_approved\":2,\r\n    \"fundamentacion_optativa_approved\":0,\r\n    \"disciplinar_obligatoria_approved\":3,\r\n    \"disciplinar_optativa_approved\":0,\r\n    \"libre_eleccion_approved\":3,\r\n    \"nivelacion_approved\":4,\r\n    \"trabajo_de_grado_approved\":0,\r\n    \"total_approved\":12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/creditsTaken/40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"creditsTaken",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/creditsSigned/40",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fundamentacion_obligatoria_signed\":2,\r\n    \"fundamentacion_optativa_signed\":2,\r\n    \"disciplinar_obligatoria_signed\":3,\r\n    \"disciplinar_optativa_signed\":3,\r\n    \"libre_eleccion_signed\":0,\r\n    \"nivelacion_signed\":0,\r\n    \"trabajo_de_grado_signed\":0,\r\n    \"total_signed\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/creditsSigned/40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"creditsSigned",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/studentSubjects/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/studentSubjects/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"studentSubjects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/studentSubjects/1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject_code\":1000017,\r\n    \"tipology\":\"Fundamentación Obligatoria\",\r\n    \"period\":\"2021-1S\",\r\n    \"grade\":4.5,\r\n    \"outcome\":\"Aprobada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/studentSubjects/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"studentSubjects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/subjects",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\":1000017,\r\n    \"name\":\"Fundamentos de electricidad y magnetismo\",\r\n    \"credits\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/creditSummary/40",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/creditSummary/40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"creditSummary",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/averages/40",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/averages/40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"averages",
+						"40"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
